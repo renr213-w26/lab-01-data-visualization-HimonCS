@@ -1,14 +1,59 @@
 ---
 title: "Lab 1 - Data visualization"
-format: html
+author: "Himon Chin-Sam"
+format: pdf
 editor: visual
 ---
+
+```{r}
+library(tidyverse)
+```
 
 # Questions
 
 ## Part 1
 
 ### Question 1
+
+```{r}
+ggplot(midwest, aes(x = popdensity)) +
+  geom_histogram(binwidth = 100) +
+  labs(
+    x = "Population density",
+    y = "Count",
+    title = "Population density of midwesten counties",
+    subtitle = "Binwidth = 100"
+  )
+
+ggplot(midwest, aes(x = popdensity)) +
+  geom_histogram(binwidth = 1000) +
+  labs(
+    x = "Population density",
+    y = "Count",
+    title = "Population density of midwesten counties",
+    subtitle = "Binwidth = 1000"
+  )
+
+ggplot(midwest, aes(x = popdensity)) +
+  geom_histogram(binwidth = 10000) +
+  labs(
+    x = "Population density",
+    y = "Count",
+    title = "Population density of midwesten counties",
+    subtitle = "Binwidth = 10000"
+  )
+
+ggplot(midwest, aes(x = popdensity)) +
+  geom_histogram(binwidth = 100000) +
+  labs(
+    x = "Population density",
+    y = "Count",
+    title = "Population density of midwesten counties",
+    subtitle = "Binwidth = 100000"
+  )
+```
+
+Binwidth 1000 is most appropriate for this data because the data is grouped in a sufficient ranges to see patterns in the overall set. Any smaller or bigger will have the data distribution be convoluted and its shape ambiguous.
 
 ### Question 2
 
