@@ -57,6 +57,16 @@ Binwidth 1000 is most appropriate for this data because the data is grouped in a
 
 ### Question 2
 
+```{r}
+ggplot(midwest, aes(x = popdensity)) +
+  geom_boxplot() +
+  labs(
+    x = "Population density",
+    y = "Count",
+    title = "Population density of midwesten counties",
+  )
+```
+
 ### Question 3
 
 ### Question 4
